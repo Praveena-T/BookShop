@@ -1,0 +1,56 @@
+.input-icon{
+    color: var(--primary-color);
+}
+
+.input-icon-background{
+    background: var(--dark-color);
+}
+
+.input-text{
+    /* border-color: var(--primary-color);
+    border-radius: 20px;
+    border: 1px solid */
+    background: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 30px; 
+    border: 1px solid var(--dark-color);
+
+}
+
+.input-text:hover{
+    border-bottom: 3px solid var(--primary-color);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: #fdeff4;
+}
+
+.btn-submit-data{
+    margin-top: 20px;
+    background: var(--dark-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+
+.btn-submit-data:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.btn-reset-data{
+    margin-top: 20px;
+    background: ash;
+    color: var(--primary-color);
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+
+.btn-reset-data:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+    letter-spacing: 1px;
+}
