@@ -1,2 +1,0 @@
-# BookShop
-CRUD operations
