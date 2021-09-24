@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --dark-color: #252325;
+    --primary-color: #e44379;
+    --light-color: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.navbar{
+    background: white;
+}
+
+.header-name{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 30px;
+}
+
+.nav-item{
+    font-size: 18px;
+    letter-spacing: 2px; 
+}
+.nav-link{
+    color: var(--dark-color);
+}
+.container-fluid .navbar-nav a.nav-link:hover{
+    color: var(--primary-color);
+    letter-spacing: 2px; 
+}
+
+.footer{
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 5px;
+}
+
+.jumbotron{
+    background: var(--dark-color);
+    height: 40vh;
+    padding: 10px;
+}
+
+.row{
+    padding-top: 50px;
+}
+
+.jumbotron-head{
+    padding-left: 30px;
+    /* align-self: center; */
+    /* background: pink;; */
+}
+
+.display-4, .lead_{
+    color: var(--primary-color);
+    letter-spacing: 2px; 
+}
+
+.jumbotron-text{
+    -webkit-text-stroke-width: 0.05px;
+    -webkit-text-stroke-color: var(--light-color);
+    text-shadow: 0.1em 0.05em 0.05em var(--light-color);
+    color: var(--light-color);
+}
+
+
+.btn-jumbotron{
+    margin-top: 20px;
+    background: var(--light-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    letter-spacing: 1px; 
+}
+
+.btn-jumbotron:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    /* letter-spacing: 1px;  */
+}
+
+.jumbotron-image:hover{
+    -moz-box-shadow: 0 0 10px #e44379;
+      -webkit-box-shadow: 0 0 10px #e44379;
+      box-shadow: 0 0 10px #e44379;
+}
+
+/* .owl-carousel .item {
+    height: 10rem;
+    background: #f04124;
+    display: flex;
+    justify-content: center;
+    align-items: center; font-size:70px; color:#fff;
+} */
