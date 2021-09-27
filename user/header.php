@@ -14,9 +14,20 @@
     <!-- custom css -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contact_us.css">
-    <!-- owl carousel link -->
+    <link rel="stylesheet" href="../css/services.css">
+
+    <!-- owl carousel link 
+        -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <!-- mdb -->
+    <!-- Font Awesome -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" /> -->
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" /> -->
+    <!-- MDB -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" /> -->
 
 </head>
 
@@ -32,13 +43,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-lg-auto me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-3">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./home.php">Home</a>
                         </li>
                         <li class="nav-item px-3">
                             <a class="nav-link" href="./books.php">Books</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="./services.php">Services</a>
                         </li>
                         <li class="nav-item px-3">
                             <a class="nav-link" href="./about_us.php">About Us</a>
