@@ -64,7 +64,7 @@ include '../db/config.php';
                         <button type="submit" class="btn btn-submit-data1"> REGISTER</button>
                     </div>
                     <div class="text-left">
-                        <a type="submit" class="btn-reset-data1" href="./login.php">Already a mamber?</a>
+                        <a type="submit" class="btn-reset-data1" href="./login.php">Already a member?</a>
                     </div>
                 </form>
             </div>

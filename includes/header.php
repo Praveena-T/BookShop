@@ -31,9 +31,16 @@
     <!-- MDB -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" /> -->
 
+    <!-- sweet alert -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11">
+    </script>
+    <script src="sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
 </head>
 
-<body >
+<body>
     <div class="container-responsive">
         <!-- nav start -->
         <nav class="navbar navbar-expand-lg px-5 py-4">

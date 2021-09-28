@@ -11,6 +11,7 @@ include '../db/config.php';
         background-attachment: fixed;
         background-size: cover;
         background-color: #464646;
+        /* Font Colour */
         color: white;
     }
 </style>
@@ -36,13 +37,18 @@ include '../db/config.php';
                                 <input type="password" class="form-control input-text" id="password" name="pass" placeholder="Password">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <!-- <textarea class="form-control input-text" id="comment" placeholder="Type" rows="5" cols="50"></textarea> -->
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-4 text-end">
                         <button type="button" class="btn btn-reset-data1"> CANCEL</button>
                         <button type="submit" class="btn btn-submit-data1"> LOGIN</button>
                     </div>
                     <div class="text-left">
-                        <a type="btn" href="./register.php" class="btn-reset-data1 mx-4">New mamber?</a>
+                        <a type="btn" href="./register.php" class="btn-reset-data1 mx-4">New member?</a>
                         <a type="btn" href="./forgot_password.php" class="btn-reset-data1">Forgot Password?</a>
                     </div>
                 </form>

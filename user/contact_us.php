@@ -23,7 +23,6 @@ include '../includes/header.php';
                         </center>
                     </div>
                 </div>
-                <!-- <h5 class="text-light text-center">or fill the form below</h5> -->
             </div>
         </div>
     </div>
