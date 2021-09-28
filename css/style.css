@@ -43,12 +43,12 @@
 
 .jumbotron{
     background: var(--dark-color);
-    height: 40vh;
-    padding: 10px;
+    height: 30vh;
+    padding: 7px;
 }
 
 .row{
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .jumbotron-head{

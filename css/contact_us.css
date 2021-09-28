@@ -10,15 +10,18 @@
     /* border-color: var(--primary-color);
     border-radius: 20px;
     border: 1px solid */
+    border-top: none;
+    border-right: none;
+    border-left: none;
     background: var(--light-color);
     color: var(--dark-color);
-    border-radius: 30px; 
-    border: 1px solid var(--dark-color);
+    width: 20vw;
+    /* border-radius: 30px;  */
+    border-bottom: 3px solid var(--primary-color);
 
 }
 
 .input-text:hover{
-    border-bottom: 3px solid var(--primary-color);
     border-top: none;
     border-right: none;
     border-left: none;
@@ -40,6 +43,19 @@
     border: 3px solid var(--primary-color);
     letter-spacing: 1px;
 }
+.btn-submit-data1{
+    margin-top: 20px;
+    background: var(--dark-color);
+    color: #ffffff;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.btn-submit-data1:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+    letter-spacing: 1px;
+}
 
 .btn-reset-data{
     margin-top: 20px;
@@ -52,5 +68,18 @@
 .btn-reset-data:hover{
     background: var(--primary-color);
     color: var(--light-color);
+    letter-spacing: 1px;
+}
+.btn-reset-data1{
+    margin-top: 20px;
+    background: ash;
+    color: var(--primary-color);
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.btn-reset-data1:hover{
+   
+    color: #000000;
     letter-spacing: 1px;
 }

@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contact_us.css">
     <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/books.css">
+    <link rel="stylesheet" href="../css/login.css">
 
     <!-- owl carousel link 
         -->
@@ -31,7 +33,7 @@
 
 </head>
 
-<body>
+<body >
     <div class="container-responsive">
         <!-- nav start -->
         <nav class="navbar navbar-expand-lg px-5 py-4">
@@ -43,22 +45,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-lg-auto me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-3">
-                            <a class="nav-link active" aria-current="page" href="./home.php">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../user/home.php">Home</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="./books.php">Books</a>
+                            <a class="nav-link" href="../user/books.php">Books</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="./services.php">Services</a>
+                            <a class="nav-link" href="../user/services.php">Services</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="./about_us.php">About Us</a>
+                            <a class="nav-link" href="../user/about_us.php">About Us</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="./contact_us.php">Contact Us</a>
+                            <a class="nav-link" href="../user/contact_us.php">Contact Us</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="btn btn-warning nav-link" href="./login.php">Login</a>
+                            <a class="btn btn-warning nav-link" href="../register/login.php">Login</a>
                         </li>
                     </ul>
                 </div>

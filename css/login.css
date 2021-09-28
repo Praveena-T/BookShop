@@ -1,0 +1,8 @@
+.login-container{
+    /* width: 25vw;
+    height: 45vh; */
+    max-width: 35vw;
+    min-width: 30vw;
+    height: auto;
+    width: auto\9;
+}

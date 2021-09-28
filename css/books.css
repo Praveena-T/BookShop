@@ -1,0 +1,11 @@
+.book-link{
+    color: var(--primary-color);
+    text-decoration: none;
+    /* background: green; */
+}
+
+.book-link:hover{
+    font-style: italic;
+    color: var(--light-color);
+    text-decoration: underline;
+}
