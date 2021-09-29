@@ -1,0 +1,60 @@
+.input-txt{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-radius: 30px; 
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.input-txt:hover{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: #fdeff4;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.btn_submit{
+    background: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.btn_submit:hover{
+    background: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+/* 
+.btn-submit-data{
+    margin-top: 20px;
+    background: var(--dark-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+
+.btn-submit-data:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    border: 3px solid var(--primary-color);
+    letter-spacing: 1px;
+}
+.btn-submit-data1{
+    margin-top: 20px;
+    background: var(--dark-color);
+    color: #ffffff;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.btn-submit-data1:hover{
+    background: var(--primary-color);
+    color: var(--light-color);
+    letter-spacing: 1px;
+} */

@@ -5,10 +5,10 @@ include '../includes/header.php';
     <div class="row ">
         <div class="jumbotron-head">
             <div class="card jumbotron-head" style="background: #252325; border: none;">
-                <h1 class="display-4 text-center">Order Books Today.</h1>
-                <h2 class="lead_ text-center">Purchase with <span class="jumbotron-text"> Online Book.</span></h2>
+                <h2 class="display-5 text-center">Order Books Today.</h2>
+                <h3 class="lead_ text-center">Purchase with <span class="jumbotron-text"> Online Book.</span></h3>
                 <center>
-                    <a class="btn btn-jumbotron btn-lg">Explore More Details</a>
+                    <a class="btn btn-jumbotron btn-sm">Explore More Details</a>
                 </center>
             </div>
         </div>

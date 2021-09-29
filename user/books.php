@@ -43,7 +43,7 @@ include '../includes/header.php';
 </div>
 
 <div class="container mt-5 mb-3">
-    <h3 style="">Offers</h3>
+    <h3>Offers</h3>
     <div class=" owl-carousel owl-theme" id="offer-container">
 
         <div class="item shadow-sm p-3 mb-5 bg-white rounded">
