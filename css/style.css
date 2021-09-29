@@ -43,21 +43,22 @@
 
 .jumbotron{
     background: var(--dark-color);
-    height: 30vh;
-    padding: 7px;
+    height: 20vh;
+    padding: 0px;
 }
 
 .row{
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 .jumbotron-head{
     padding-left: 30px;
+    padding: 3px;
     /* align-self: center; */
     /* background: pink;; */
 }
 
-.display-4, .lead_{
+.display-5, .lead_{
     color: var(--primary-color);
     letter-spacing: 2px; 
 }
@@ -71,7 +72,8 @@
 
 
 .btn-jumbotron{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background: var(--light-color);
     color: var(--primary-color);
     border-radius: 30px;
