@@ -12,11 +12,11 @@ include '../db/config.php';
                     <h3 class="text-center text-white pt-2" style="letter-spacing:1px;">ADD NEW BOOK</h3>
                 </div>
                 <div class="card-body p-3">
-                    <form class=" p-4" method="post" action="" name="add_book_form" onsubmit="return validateForm(this)">
+                    <form class="p-4" method="post" action="../db/add_book_action.php" name="add_book_form" onsubmit="return validateForm(this)">
                         <div class="">
                             <div class="mt-0">
                                 <div class="input-group">
-                                    <input type="number" min="0" autocomplete="off" class="form-control input-txt" id="book_number" name="book_number" placeholder="Book Number">
+                                    <input type="text" autocomplete="off" class="form-control input-txt" id="book_number" name="book_number" placeholder="Book Number">
                                 </div>
                             </div>
                             <div class="mt-4">
@@ -38,7 +38,6 @@ include '../db/config.php';
                                 <div class="input-group">
                                     <p><input type="file" class="" accept="image/*" name="image" id="file" onchange="load_image(event)" style="display: none;"></p>
                                     <p><label for="file" class="form-control" style="cursor: pointer;"><i class="fa fa-upload text-center" aria-hidden="true"></i></label></p>
-
                                     <!-- <input type="image" class="form-control input-txt" name="book_image" id="book_image"> -->
                                 </div>
                             </div>
@@ -52,11 +51,9 @@ include '../db/config.php';
                                 </div>
                             </div>
                         </div>
-
                         <div class="mb-2 text-end">
                             <!-- <input type="reset" class="btn btn-reset-data1" value="RESET"> -->
-                            <button type="submit" id="submit" class="btn_submit"> ADD BOOK</button>
-
+                            <button type="submit" name="submit" id="submit" class="btn_submit"> ADD BOOK</button>
                         </div>
                     </form>
                 </div>
@@ -112,11 +109,24 @@ include '../db/config.php';
             })
             return false;
         } else {
-            alert("Added");
+            // alert("Added");
+            Swal.fire({
+                icon: 'success',
+                title: "Data Successfully Added",
+                text: 'Done'
+            })
         }
     }
 </script>
 
 <?php
+
+if (isset($_POST['submit'])) {
+    $book_number = $_POST['book_number'];
+    $book_name = $_POST['book_name'];
+    $book_author = $_POST['book_author'];
+    $book_price = $_POST['book_price'];
+    $book_image = $_POST['book_image'];
+}
 include '../includes/footer.php';
 ?>

@@ -1,5 +1,5 @@
 # BookShop
 Technologies Used:
-  Frontend: HTML, CSS, BOOTSTRAP, JavaScript
+  Frontend: HTML, CSS, Bootstrap, JavaScript
   Backend: PHP
 CRUD operations
