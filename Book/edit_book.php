@@ -1,71 +1,106 @@
 <?php
 include '../Admin/side_nav.php';
 include '../db/config.php';
-
+//fetch book genre from table book_genres
 $fetch_book_genre = "SELECT * FROM book_genres";
 $result_fetch_book_genre = mysqli_query($conn, $fetch_book_genre);
-?>
-<style>
-    body {
-        overflow-x: hidden;
-        background-image: url("https://th.bing.com/th/id/R.238bff8e7227c8dc691891f3bde28e36?rik=v%2bFNBiPxvCvqOg&pid=ImgRaw&r=0");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-color: #464646;
-        /* Font Colour */
-        color: white;
+
+$param_id = $_GET['id'];
+$sql = "SELECT * FROM book where id = $param_id";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row_ = $result->fetch_assoc()) {
+        $book_number_ = $row_['book_number'];
+        $book_name_ = $row_['book_name'];
+        $book_author_ = $row_['book_author'];
+        $book_price_ = $row_['book_price'];
+        $book_image_ = $row_['book_image'];
+        $book_genre_ = $row_['book_genre'];
+        $book_offer_ = $row_['book_offer'];
     }
-</style>
+}
+// else {
+//     echo "No data";
+// }
+
+if (isset($_POST['update'])) {
+    $book_number = $_POST['book_number'];
+    $book_name = $_POST['book_name'];
+    $book_author = $_POST['book_author'];
+    $book_price = $_POST['book_price'];
+    $book_image = $_POST['book_image'];
+    $book_genre = $_POST['book_genre'];
+    $book_offer = $_POST['book_offer'];
+
+    $edit = mysqli_query($conn, "update book set
+    book_number = '$book_number',
+    book_name= '$book_name',
+    book_author= '$book_author',
+    book_price= '$book_price',
+    book_image= '$book_image' ,
+    book_genre= '$book_genre' ,
+    book_offer= '$book_offer' 
+    where id=$param_id");
+
+    if ($edit) {
+        mysqli_close($conn);
+        echo '<script>
+        Swal.fire({
+            icon: "success",
+            title: "Data Successfully Added",
+            text: "Done",
+       
+        })
+        window.location.href = "view_book.php";
+        </script>';
+        exit;
+    }
+}
+?>
 <div class="container-responsive">
     <div class="row text-center">
         <div class="col-sm-4">
         </div>
         <div class="col-sm-4">
-            <div class="card m-0 shadow p-3 mb-1 bg-white rounded">
+            <div class="card m-0 shadow p-3 mb-5 bg-white rounded">
                 <div class="card-header" style="background:#e44379">
-                    <h3 class="text-center text-white pt-2" style="letter-spacing:1px;">ADD NEW BOOK</h3>
+                    <h3 class="text-center text-white pt-2" style="letter-spacing:1px;">EDIT BOOK</h3>
                 </div>
                 <div class="card-body p-3">
-                    <form class="p-4" method="post" action="../db/add_book_action.php" name="add_book_form" onsubmit="return validateForm(this)">
+                    <form class="p-4" method="post" onsubmit="return validateForm(this)">
                         <div class="">
                             <div class="mt-0">
                                 <div class="input-group">
-                                    <input type="text" autocomplete="off" class="form-control input-txt" id="book_number" name="book_number" placeholder="Book Number">
+                                    <input type="text" autocomplete="off" class="form-control input-txt" id="book_number" name="book_number" placeholder="Book Number" value="<?php echo $book_number_; ?><?php $row['book_number']  ?>">
                                 </div>
                             </div>
                             <div class="mt-4">
                                 <div class="input-group">
-                                    <input type="text" class="form-control input-txt" id="book_name" name="book_name" placeholder="Book Name">
+                                    <input type="text" class="form-control input-txt" id="book_name" name="book_name" placeholder="Book Name" value="<?php echo $book_name_; ?><?php $row['book_name']  ?>">
                                 </div>
                             </div>
                             <div class="mt-4">
                                 <div class="input-group">
-                                    <input type="text" class="form-control input-txt" id="book_author" name="book_author" placeholder="Author Name">
+                                    <input type="text" class="form-control input-txt" id="book_author" name="book_author" placeholder="Author Name" value="<?php echo $book_author_; ?><?php $row['book_author']  ?>">
                                 </div>
                             </div>
                             <div class="mt-4">
                                 <div class="input-group">
-                                    <input type="text" class="form-control input-txt" id="book_price" name="book_price" placeholder="Price">
+                                    <input type="text" class="form-control input-txt" id="book_price" name="book_price" placeholder="Price" value="<?php echo $book_price_; ?><?php $row['book_price']  ?>">
                                 </div>
                             </div>
                             <div class="mt-4">
                                 <div class="input-group">
-                                    <p><input type="file" class="" accept="image/*" name="image" id="file" onchange="load_image(event)" style="display: none;"></p>
+                                    <p><input type="file" class="" accept="image/*" name="book_image" id="file" onchange="load_image(event)" style="display: none;" value="<?php echo $book_image_; ?><?php $row['book_image']  ?>"></p>
                                     <p><label for="file" class="form-control" style="cursor: pointer;"><i class="fa fa-upload text-center" aria-hidden="true"></i></label></p>
                                     <!-- <input type="image" class="form-control input-txt" name="book_image" id="book_image"> -->
                                 </div>
                             </div>
                             <div class="">
                                 <div class="input-group">
-                                    <select class="form-select form-select mb-3 input-txt" aria-label=".form-select example" name="book_genre" id="book_genre">
-                                        <option>Select Genre</option>
-                                        <?php while ($genre = mysqli_fetch_array($result_fetch_book_genre)) :; ?>
-                                            <option value="<?php echo $genre[1]; ?>">
-                                                <?php echo $genre[1]; ?> </option>
-                                        <?php endwhile;
-                                        ?>
+                                    <select class="form-select form-select mb-3 input-txt" aria-label=".form-select example" name="book_genre" id="book_genre" value="<?php echo $row['book_genre']; ?>">
+                                        <option value="<?php echo $book_genre_; ?>"><?php echo $book_genre_; ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -73,16 +108,16 @@ $result_fetch_book_genre = mysqli_query($conn, $fetch_book_genre);
                                 <div class="input-group">
                                     <select class="form-select form-select mb-3 input-txt" aria-label=".form-select example" name="book_offer" id="book_offer">
                                         <option selected>Offer</option>
+                                        <option value="<?php echo $book_offer_; ?><?php $row['book_offer']  ?>"></option>
                                         <option value="Available">Available</option>
                                         <option value="Unavailable">Unavailable</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-1 text-end">
-                            <!-- <input type="reset" class="btn btn-reset-data1" value="RESET"> -->
-                            <a type="button" href="./Genre/add_genre.php" class="btn-reset-data1 mx-5">ADD GENRE</a>
-                            <button type="submit" name="submit" id="submit" class="btn_submit"> ADD BOOK</button>
+                        <div class="mb-2 text-end">
+                            <input type="reset" class="btn btn-reset-data1" value="RESET">
+                            <button type="submit" name="update" class="btn_submit"> EDIT BOOK</button>
                         </div>
                     </form>
                 </div>
@@ -106,7 +141,6 @@ $result_fetch_book_genre = mysqli_query($conn, $fetch_book_genre);
         let book_author = document.forms["add_book_form"]["book_author"].value.trim();
         let book_price = document.forms["add_book_form"]["book_price"].value.trim();
         let book_image = document.forms["add_book_form"]["image"].value;
-        let book_genre = document.forms["add_book_form"]["book_genre"].value;
         let book_offer = document.forms["add_book_form"]["book_offer"].value;
         var numbersOnly = /^\d+$/;
         var decimalOnly = /^\s*-?[1-9]\d*(\.\d{1,2})?\s*$/;
@@ -150,15 +184,5 @@ $result_fetch_book_genre = mysqli_query($conn, $fetch_book_genre);
 </script>
 
 <?php
-
-if (isset($_POST['submit'])) {
-    $book_number = $_POST['book_number'];
-    $book_name = $_POST['book_name'];
-    $book_author = $_POST['book_author'];
-    $book_price = $_POST['book_price'];
-    $book_image = $_POST['book_image'];
-    $book_genre = $_POST['book_genre'];
-    $book_offer = $_POST['book_offer'];
-}
 include '../includes/footer.php';
 ?>
