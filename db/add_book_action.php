@@ -6,11 +6,13 @@ $book_name = $_POST['book_name'];
 $book_author = $_POST['book_author'];
 $book_price = $_POST['book_price'];
 $book_image = $_POST['book_image'];
+$book_genre = $_POST['book_genre'];
+$book_offer = $_POST['book_offer'];
 
 $status = "";
 
-$sql = "INSERT INTO book(book_number, book_name, book_author, book_price, book_image)
-        VALUES('$book_number', '$book_name', '$book_author', '$book_price', '$book_image')";
+$sql = "INSERT INTO book(book_number, book_name, book_author, book_price, book_image, book_genre, book_offer)
+        VALUES('$book_number', '$book_name', '$book_author', '$book_price', '$book_image', '$book_genre', '$book_offer')";
 
 if (mysqli_query($conn, $sql)) {
     $status = "save";
