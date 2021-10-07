@@ -27,7 +27,13 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
         <a href="./admin_home.php"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="./admin_services.php"><i class="fa fa-fw fa-wrench"></i> Services</a>
+        <a class="dropdown-btn"><i class="fa fa-fw fa-book"></i>
+            <i class="fa fa-caret-down"></i>Services
+        </a>
+        <div class="dropdown-container">
+            <a href="../service/add_service.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+            <a href="../service/view_table_service.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
+        </div>
         <a href="./admin_contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         <a href="./admin_profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
         <a class="dropdown-btn"><i class="fa fa-fw fa-book"></i> Books
