@@ -41,8 +41,8 @@
             <i class="fa fa-caret-down"></i>
         </a>
         <div class="dropdown-container">
-            <a href="../Book/add_book.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
-            <a href="../Book/view_book.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
+            <a href="../Genre/add_genre.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+            <a href="../Genre/view_genre.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
         </div>
         <!-- <div class="btn-group dropup">
             <button type="button" class="btn btn-secondary">Action</button>
