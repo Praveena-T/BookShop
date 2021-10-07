@@ -28,7 +28,6 @@ include '../Admin/side_nav.php';
                     <?php
 
                     while ($row = $result->fetch_assoc()) {
-
                         echo "</tr>";
                         echo "<td>" . $i++ . "</td>";
                         echo "<td>" . $row['book_number'] . "</td>";
@@ -43,9 +42,9 @@ include '../Admin/side_nav.php';
                             echo "<td> <span class='badge rounded-pill bg-warning'>" . $row['book_offer'] . "</span></td>";
                         }
                         echo "<td>";
-                        echo '<a type="button" href="view_one_book.php?id=' . $row['id'] . '" class="btn-sm btn-dark mx-1" title="View Record" data-toggle="tooltip"><span><i class="text-white fa fa-file-o"></i></span></a>';
-                        echo '<a type="button" href="edit_book.php?id=' . $row['id'] . '" class="btn-sm btn-primary mx-1" title="Update Record" data-toggle="tooltip"><span><i class="fa fa-pencil-square-o text-white"></i></span></a>';
-                        echo '<a type="button" href="../db/delete_book.php?id=' . $row['id'] . '"  class="btn-sm btn-danger mx-1" title="Delete Record" data-toggle="tooltip"><span><i class="text-white fa fa-trash-o"></i></span></a>';
+                        echo '<a type="button" href="view_one_book.php?id=' . $row['id'] . '" class="btn-sm mx-1" title="View Record" data-toggle="tooltip" style="background:#3d3d3d"><span><i class="text-white fa fa-file-o"></i></span></a>';
+                        echo '<a type="button" href="edit_book.php?id=' . $row['id'] . '" class="btn-sm mx-1" title="Update Record" data-toggle="tooltip" style="background:#008b8b"><span><i class="fa fa-pencil-square-o text-white"></i></span></a>';
+                        echo '<a type="button" href="../db/delete_book.php?id=' . $row['id'] . '"  class="btn-sm mx-1" title="Delete Record" data-toggle="tooltip" style="background:#ff4242"><span><i class="text-white fa fa-trash-o"></i></span></a>';
                         echo "</td>";
                         echo "</tr>";
                     }
