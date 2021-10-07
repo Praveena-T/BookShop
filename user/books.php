@@ -1,5 +1,9 @@
 <?php
 include '../includes/header.php';
+include '../db/config.php';
+$sql = "select * from book";
+$result = $conn->query($sql);
+
 ?>
 <style>
     .owl-carousel .item {
@@ -11,8 +15,6 @@ include '../includes/header.php';
         font-size: 70px;
         margin: 5px;
         color: #fff;
-        /* border-radius: 20px; */
-        /* border: 0.1px solid var(--dark-color); */
     }
 
     img {
@@ -28,13 +30,11 @@ include '../includes/header.php';
     <div class="row">
         <div class="jumbotron-head">
             <div class="card jumbotron-head" style="background: #252325; border: none;">
-                <h1 class="display-4 text-center">Purchase your books.</h1>
+                <h1 class="display-5 text-center">Purchase your books.</h1>
                 <h2 class="lead_ text-center mt-3">Available categories</h2>
                 <div class="mt-4">
                     <center>
-                        <a class="book-link mx-2">Story</a>
-                        <a class="book-link mx-2">Activity</a>
-                        <a class="book-link mx-2">Drawing</a>
+                        <a class="book-link mx-2">New Arrivals</a>
                     </center>
                 </div>
             </div>
@@ -43,15 +43,32 @@ include '../includes/header.php';
 </div>
 
 <div class="container mt-5 mb-3">
-    <h3>Offers</h3>
+    <h3 class="mt-5 pt-4">Offers</h3>
     <div class=" owl-carousel owl-theme" id="offer-container">
 
-        <div class="item shadow-sm p-3 mb-5 bg-white rounded">
-            <!-- <h4 class="text-dark bg-warning">1</h4> -->
+        <?php
+
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="bg-white rounded shadow-sm p-0 mb-2">';
+            echo '<div class="item shadow-sm p-3 mb-0 bg-white rounded">';
+            echo '<img src="https://th.bing.com/th/id/OIP.og9moohwcJ-lrbSCJvnn8wHaJx?pid=ImgDet&w=193&h=254&c=7">';
+            echo '</div>';
+            echo '<div class=" p-3">';
+            // echo "<p class='card-text text-dark'>" . $row['book_author']  . "</p>";
+            echo "<p class='text-dark'>" . 'LKR. ' . $row['book_price']  . "</p>";
+            echo "<a type='button' class='btn-lg mx-4'><i class='fa fa-shopping-cart' aria-hidden='true' style='color:#000000'></i></a>";
+            echo "<a type='button' class='btn-lg'><i class='fa fa-gratipay text-danger' aria-hidden='true'></i></a>";
+            echo '</div>';
+            echo '</div>';
+        }
+        ?>
+        <!-- <div class="item shadow-sm p-3 mb-5 bg-white rounded">
+           
             <img src="https://th.bing.com/th/id/OIP.og9moohwcJ-lrbSCJvnn8wHaJx?pid=ImgDet&w=193&h=254&c=7">
         </div>
+
         <div class="item shadow-sm p-3 mb-5 bg-white rounded">
-            <!-- <h4>2</h4> -->
+       
             <img src="https://th.bing.com/th/id/OIP.ATXGSECrbkqlVWNSA5d-8QHaHg?pid=ImgDet&w=493&h=500&rs=1">
 
         </div>
@@ -84,7 +101,7 @@ include '../includes/header.php';
         </div>
         <div class="item shadow-sm p-3 mb-5 bg-white rounded">
             <h4>12</h4>
-        </div>
+        </div> -->
     </div>
 </div>
 
