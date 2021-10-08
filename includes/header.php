@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../css/services.css">
     <link rel="stylesheet" href="../css/books.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/book_form.css">
 
     <!-- owl carousel link 
         -->
@@ -80,7 +81,7 @@
                             <a class="nav-link" href="../user/about_us.php">About Us</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="../user/contact_us.php">Contact Us</a>
+                            <a class="nav-link" href="../contact_us/add_contact_us.php">Contact Us</a>
                         </li>
                         <li class="nav-item px-3">
                             <a class="btn btn-warning nav-link" href="../register/login.php">Login</a>
