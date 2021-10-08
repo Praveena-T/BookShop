@@ -59,7 +59,7 @@ include '../db/config.php';
                     <div class="mt-3">
                         <center>
                             <input type="reset" value="RESET" class="fa fa-repeat btn btn-reset-data" />
-                            <button type="submit" name="submit" id="submit" class="btn-submit-data"><i class="fa fa-paper-plane" aria-hidden="true"></i> SEND</button>
+                            <button type="submit" name="submit" id="submit" class="btn_submit"> SEND </button>
                         </center>
                     </div>
                 </form>
@@ -80,41 +80,33 @@ include '../db/config.php';
         var uppercaseOnly = /^[A-Z]+$/;
         var lowercaseOnly = /^[a-z]+$/;
         var stringOnly = /^[A-Za-z0-9]+$/;
-        var emailFormat = !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix";
+        var emailFormat = !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix");
 
-            if (name == "" || email == "" || comment == "") {
-                // alert("Fill the empty fields");
-                Swal.fire({
-                    icon: 'warning',
-                    title: "Check Fields",
-                    text: 'Fill the empty fields'
-                })
-                return false;
-            } else if (name <= 0 || name.match(uppercaseOnly) || name.match(lowercaseOnly)) {
-                // alert("Please enter a valid price");
-                Swal.fire({
-                    icon: 'warning',
-                    title: "Check Book Number",
-                    text: 'Please enter a valid book number'
-                })
-                return false;
-            } else if (!email.preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix")) {
-                // alert("Please enter a valid price");
-                Swal.fire({
-                    icon: 'warning',
-                    title: "Check email",
-                    text: 'Please enter a valid email'
-                })
-                return false;
-            } else {
-                // alert("Added");
-                Swal.fire({
-                    icon: 'success',
-                    title: "Data Successfully Added",
-                    text: 'Done'
-                })
-            }
+        if (name == "" || email == "" || comment == "") {
+            // alert("Fill the empty fields");
+            Swal.fire({
+                icon: 'warning',
+                title: "Check Fields",
+                text: 'Fill the empty fields'
+            })
+            return false;
+        } else if (name <= 0 || name.match(uppercaseOnly) || name.match(lowercaseOnly)) {
+            // alert("Please enter a valid price");
+            Swal.fire({
+                icon: 'warning',
+                title: "Check Book Number",
+                text: 'Please enter a valid book number'
+            })
+            return false;
+        } else {
+            // alert("Added");
+            Swal.fire({
+                icon: 'success',
+                title: "Data Successfully Added",
+                text: 'Done'
+            })
         }
+    }
 </script>
 
 <?php
