@@ -18,8 +18,6 @@
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11">
     </script>
-    <!-- <script src="sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css"> -->
 </head>
 
 <body>
@@ -27,14 +25,14 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
         <a href="./admin_home.php"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a class="dropdown-btn"><i class="fa fa-fw fa-book"></i>
+        <a class="dropdown-btn"><i class="fa fa-fw fa-cog"></i>
             <i class="fa fa-caret-down"></i>Services
         </a>
         <div class="dropdown-container">
             <a href="../service/add_service.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
             <a href="../service/view_table_service.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
         </div>
-        <a href="./admin_contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="../contact_us/view_table_contact.php"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         <a href="./admin_profile.php"><i class="fa fa-fw fa-user"></i> Profile</a>
         <a class="dropdown-btn"><i class="fa fa-fw fa-book"></i> Books
             <i class="fa fa-caret-down"></i>
