@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/side_nav.css" type="text/css">
     <link rel="stylesheet" href="../css/book_form.css" type="text/css">
     <link rel="stylesheet" href="../css/contact_us.css" type="text/css">
+    <link rel="stylesheet" href="../css/breadcrum.css" type="text/css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
@@ -41,13 +42,8 @@
             <a href="../Book/add_book.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
             <a href="../Book/view_book.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
         </div>
-        <a class="dropdown-btn"><i class="fa fa-fw fa-file-text"></i> Genre
-            <i class="fa fa-caret-down"></i>
+        <a href="../Genre/add_genre.php" class="dropdown-btn"><i class="fa fa-fw fa-file-text"></i> Genre
         </a>
-        <div class="dropdown-container">
-            <a href="../Genre/add_genre.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
-            <a href="../Genre/view_genre.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
-        </div>
         <!-- <div class="btn-group dropup">
             <button type="button" class="btn btn-secondary">Action</button>
             <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action
@@ -62,13 +58,17 @@
             </div>
 
         </div> -->
+        <a class="dropdown-btn"><i class="fa fa-fw fa-address-card"></i> Vacancy
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="dropdown-container">
+            <a href="../vacancy/add_available_vacancy.php"><i class="fa fa-plus" aria-hidden="true"></i> New</a>
+            <a href="../vacancy/view_available_vacancy.php"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
+        </div>
     </div>
 
     <button class="openbtn" onclick="openNav()">☰</button>
-    <!-- <h2>Collapsed Sidepanel</h2>
-    <p>Click on the hamburger menu/bar icon to open the sidepanel.</p> -->
     <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
         for (i = 0; i < dropdown.length; i++) {
