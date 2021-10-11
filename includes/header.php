@@ -84,6 +84,9 @@
                             <a class="nav-link" href="../contact_us/add_contact_us.php">Contact Us</a>
                         </li>
                         <li class="nav-item px-3">
+                            <a class="nav-link" href="../vacancy/show_vacancy_main.php">Vacancy</a>
+                        </li>
+                        <li class="nav-item px-3">
                             <a class="btn btn-warning nav-link" href="../register/login.php">Login</a>
                         </li>
                     </ul>
