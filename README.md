@@ -1,5 +1,6 @@
 # BookShop
-##Technologies Used:
+## CRUD operations
+## Technologies Used:
  ### Frontend: HTML, CSS, Bootstrap, JavaScript
-  ###Backend: PHP
-##CRUD operations
+ ### Backend: PHP, MySQL
+
