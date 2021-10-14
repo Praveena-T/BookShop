@@ -1,0 +1,10 @@
+/* hover image when mouse in placed on image */
+.image-zoom{
+    transition: transform .8s;
+}
+
+.image-zoom:hover{
+    -ms-transform: scale(1.0); 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.2); 
+}
