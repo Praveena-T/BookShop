@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../css/books.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/book_form.css">
+    <link rel="stylesheet" href="../css/show_vacancy_main.css">
 
     <!-- owl carousel link 
         -->

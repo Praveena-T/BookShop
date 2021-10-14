@@ -4,7 +4,7 @@ include '../db/config.php';
 
 ?>
 <style>
-    body {
+    /* body {
         overflow-x: hidden;
         background-image: url("https://th.bing.com/th/id/R.238bff8e7227c8dc691891f3bde28e36?rik=v%2bFNBiPxvCvqOg&pid=ImgRaw&r=0");
         background-position: center center;
@@ -12,10 +12,27 @@ include '../db/config.php';
         background-attachment: fixed;
         background-size: cover;
         background-color: #464646;
-        /* Font Colour */
+        Font Colour
         color: white;
+    } */
+
+    nav ol li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    nav ol li a:hover {
+        color: var(--primary-color);
+        text-decoration: 1px blue solid;
     }
 </style>
+<nav class="container" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../Admin/dashboard.php"><span class="badge bg-dark">Dashboard</span></a></li>
+        <li class="breadcrumb-item"><a href="../service/view_table_service.php"><span class="badge bg-dark">View Services</span></a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Services</li>
+    </ol>
+</nav>
 <div class="container-responsive">
     <div class="row text-center">
         <div class="col-sm-4">
