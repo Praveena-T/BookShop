@@ -190,6 +190,7 @@ if (isset($_POST['submit'])) {
     $english = $_POST['english'];
     $skill = $_POST['skill'];
     $cv = $_POST['cv'];
+    $status = 'pending';
 }
 include '../includes/footer.php';
 ?>
