@@ -44,6 +44,8 @@
         </div>
         <a href="../Genre/add_genre.php" class="dropdown-btn"><i class="fa fa-fw fa-file-text"></i> Genre
         </a>
+        <a href="../apply_job/view_job_form.php" class="dropdown-btn"><i class="fa fa-fw fa-file-text"></i> Applicants
+        </a>
         <!-- <div class="btn-group dropup">
             <button type="button" class="btn btn-secondary">Action</button>
             <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action

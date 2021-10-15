@@ -14,19 +14,20 @@ $tamil = $_POST['tamil'];
 $english = $_POST['english'];
 $skill = $_POST['skill'];
 $cv = $_POST['cv'];
-$status = "";
+$status = 'Pending';
+$status_ = "";
 
-$sql = "INSERT INTO job_apply(fname, lname, email, phone, address, gender, seeking_job, sinhala, tamil, english, skill, cv)
-VALUES('$fname', '$lname', '$email', '$phone', '$address', '$gender', '$seeking_job', '$sinhala', '$tamil', '$english', '$skill', '$cv')";
+$sql = "INSERT INTO job_apply(fname, lname, email, phone, address, gender, seeking_job, sinhala, tamil, english, skill, cv, status)
+VALUES('$fname', '$lname', '$email', '$phone', '$address', '$gender', '$seeking_job', '$sinhala', '$tamil', '$english', '$skill', '$cv', '$status')";
 
 if (mysqli_query($conn, $sql)) {
-    $status = "save";
+    $status_ = "save";
 } else {
-    $status = "error";
+    $status_ = "error";
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-if ($status) {
+if ($status_) {
     echo '<script>
         window.location.href = "../apply_job/job_form.php";
         </script>';
