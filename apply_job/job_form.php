@@ -13,7 +13,7 @@ $result_fetch_job_role = mysqli_query($conn, $fetch_job_role);
                 <h3 class="text-center text-dark pt-3" style="letter-spacing:1px;">Job Application</h3>
             </div>
             <div class="card-body p-3">
-                <form class="p-2" name="add_job_form" method="post" action="../db/add_job_form_action.php" onsubmit="return validateForm(this)">
+                <form class="p-2" method="post" action="../db/add_job_form_action.php" name="add_job_form" onsubmit="return validateForm(this)">
                     <div class="">
                         <div class="">
                             <div class="row">
@@ -25,7 +25,6 @@ $result_fetch_job_role = mysqli_query($conn, $fetch_job_role);
                                 </div>
                             </div>
                         </div>
-
                         <div class="mt-2">
                             <div class="row">
                                 <div class="col">
@@ -102,9 +101,9 @@ $result_fetch_job_role = mysqli_query($conn, $fetch_job_role);
                         </div>
 
                         <div class=" mt-2">
-                            <label for="inputAddress2" class="form-label">Upload CV</label>
+                            <label class="form-label">Upload CV</label>
                             <div class="input-group">
-                                <input type="file" name="pdf_file" id="pdf_file" accept="application/pdf" />
+                                <input type="file" name="cv" id="cv" accept="application/pdf" />
                             </div>
                         </div>
                     </div>
@@ -130,10 +129,10 @@ $result_fetch_job_role = mysqli_query($conn, $fetch_job_role);
         let phone = document.forms["add_job_form"]['phone'].value.trim();
         let address = document.forms["add_job_form"]['address'].value.trim();
         let gender = document.forms["add_job_form"]['gender'].value.trim();
-        let seeking_job = document.forms["add_job_form"]['seeking_job'].value;
-        let sinhala = document.forms["add_job_form"]['sinhala'].value;
-        let tamil = document.forms["add_job_form"]['tamil'].value;
-        let english = document.forms["add_job_form"]['english'].value;
+        let seeking_job = document.forms["add_job_form"]['seeking_job'].value.trim();
+        let sinhala = document.forms["add_job_form"]['sinhala'].value.trim();
+        let tamil = document.forms["add_job_form"]['tamil'].value.trim();
+        let english = document.forms["add_job_form"]['english'].value.trim();
         let skill = document.forms["add_job_form"]['skill'].value.trim();
         let cv = document.forms["add_job_form"]['cv'].value.trim();
 
@@ -142,51 +141,38 @@ $result_fetch_job_role = mysqli_query($conn, $fetch_job_role);
         var uppercaseOnly = /^[A-Z]+$/;
         var lowercaseOnly = /^[a-z]+$/;
         var stringOnly = /^[A-Za-z0-9]+$/;
-        var emailFormat = !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix");
-        var phoneFormat = !preg_match('/^[0-9]{10}+$/');
+        var email_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var phone_format = /^\d{10}$/;
 
         if (fname == "" || lname == "" || email == "" || phone == "" || address == "" || gender == "" || seeking_job == "" || sinhala == "" || tamil == "" || english == "" || skill == "" || cv == "") {
-            // Swal.fire({
-            //     icon: 'warning',
-            //     title: "Check Fields",
-            //     text: 'Fill the empty fields'
-            // })
-
-            alert('empty');
+            Swal.fire({
+                icon: 'warning',
+                title: "Check Fields",
+                text: 'Fill the empty fields'
+            })
             return false;
-            // } else if (name <= 0 || name.match(uppercaseOnly) || name.match(lowercaseOnly)) {
-            //     // alert("Please enter a valid price");
-            //     Swal.fire({
-            //         icon: 'warning',
-            //         title: "Check Book Number",
-            //         text: 'Please enter a valid book number'
-            //     })
-            //     return false;
-
-        }
-        // else {
-        // alert("Added");
-        // if (address.match(emailFormat)) {
-        //     Swal.fire({
-        //         icon: 'warning',
-        //         title: "Check Book Number",
-        //         text: 'Please enter a valid email'
-        //     })
-        // } else if (phone.match(phoneFormat)) {
-        //     Swal.fire({
-        //         icon: 'warning',
-        //         title: "Check Book Number",
-        //         text: 'Please enter a valid phone number'
-        //     })
-        // } 
-        else {
+        } else {
+            if (!email.match(email_format)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "Check Email",
+                    text: 'Enter valid email address'
+                })
+                return false;
+            } else if (!phone.match(phone_format)) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: "Check Phone Number",
+                    text: 'Make sure to enter 10 numbers'
+                })
+                return false;
+            }
             Swal.fire({
                 icon: 'success',
                 title: "Data Successfully Added",
                 text: 'Done'
             })
         }
-        // }
     }
 </script>
 
